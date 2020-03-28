@@ -1,36 +1,26 @@
-import React from 'react'
-//
 
-import { Chart } from 'react-charts'
-let sourceCode
-export default function Line () {
-    const data = React.useMemo(
-        () => [
-          [[1, 2], [2, 1], [3, 3]]
-          
-        ],
-        []
-      )
-  const series = React.useMemo(
-    () => ({
-      showPoints: false
-    }),
-    []
-  )
   
-  const axes = React.useMemo(
-    () => [
-      { primary: true, type: 'time', position: 'bottom' },
-      { type: 'linear', position: 'left' }
-    ],
-    []
-  )
-  return (
-    <>
-      <br />
-      <br />
-        <Chart data={data} series={series} axes={axes} tooltip />
-      <br />
-    </>
-  )
-}
+
+const axios = require('axios');
+const cheerio = require('cheerio');
+let fs=require('fs');
+
+axios.get('https://dev.to/aurelkurtula')
+    .then((response) => {
+        if(response.status === 200) {
+            const html = response.data;
+            const $ = cheerio.load(html); 
+            let devtoList = [];
+            $('.single-article').each(function(i, elem) {
+                devtoList[i] = {
+                    title: $(this).find('h3').text().trim(),
+                    url: $(this).children('.index-article-link').attr('href'),
+                    tags: $(this).find('.tags').text().split('#')
+                          .map(tag =>tag.trim())
+                          .filter(function(n){ return n !=="" })
+                }      
+            },
+            console.log(devtoList)
+);
+    }
+}, (error) => console.log(error) );

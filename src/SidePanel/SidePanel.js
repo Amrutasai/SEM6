@@ -1,15 +1,25 @@
 import React from 'react'
-import './SidePanel.css'
+import './SidePanel.css';
+import { NavLink } from 'react-router-dom'; 
+
 
 function SidePanel(){
     return(
-        <div style={{margin:'10px',display:'flex',flexDirection:'column'}}>
-            <div style={{height:'190px',width:'190px',backgroundColor:'#FC6868',color:'white'}}>
-                <p style={{textAlign:'center',fontWeight:'bolder',fontSize:'25px',marginTop:'140px'}}>Mumbai  </p>
+        <div style={{
+            display:'flex',flexDirection:'column',boxShadow:'0px 0px 1px rgba(0,0,0,0.2)',
+             width:'250px',height:'100vh',position:'absolute',top:'0'}}
+        >
+            <div style={{backgroundColor:'#FC6868',color:'white'}}>
+            <NavLink style={{textDecoration:'none',color:'white'}}to="/"><div style={{textAlign:'center',fontWeight:'bolder',fontSize:'25px',marginTop:'200px',padding:'10px'}}>Mumbai  </div></NavLink>
             </div>
-            <div>
-                <p>About</p>
+            <div >
+                <NavLink style={{textDecoration:'none'}}to="/about"><p className='p-sidepanel'>About</p></NavLink>
+                <NavLink style={{textDecoration:'none'}}to="/services"><p className='p-sidepanel'>Parking Services</p></NavLink>
+                <NavLink style={{textDecoration:'none'}}to="/about"><p className='p-sidepanel'>Customer Services</p></NavLink>
+                <NavLink style={{textDecoration:'none'}}to="/about"><p className='p-sidepanel'>Baggage Services</p></NavLink>
+                <NavLink style={{textDecoration:'none'}}to="/about"><p className='p-sidepanel'>Contact</p></NavLink>
             </div>
+            
         </div>
     )
 }
