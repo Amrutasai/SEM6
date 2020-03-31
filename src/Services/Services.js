@@ -4,22 +4,26 @@ import Areachart from '../reactChart2'
 import MyChart from '../reactCharts1'
 import Lines from '../Lines'
 import BarChart from '../BarChart'
+import { map } from 'd3'
 
-function Services() {
+function Services(props) {
+    let {title,circledata,chartdata}=props
     return(
-        <div style={{margin:'20px',marginLeft:'275px',paddingTop:'40px'}}>
+        <div style={{margin:'20px',marginLeft:'275px',paddingTop:'10px'}}>
             <div>
-                    <Areachart/>
+                    <Areachart subdata={chartdata}/>
             </div>
             <div style={{padding:'25px',margin:'10px',color:'#7E7E7E',fontSize:'20px',fontWeight:'lighter'}}> 
-                        Average Parking Space utilization
+                        {title}
             </div>
             <div style={{boxShadow:'0px 0px 1px rgba(0,0,0,0.2)',padding:'10px'}}>
                     
                     <div style={{display:'flex',flexDirection:'row',paddingRight:'20px',justifyContent:'center'}}>
-                        <Circle pathcolor='#EC5C5C' percentage='56' icon='fa fa-car fa-2x' arrow='up'/><Circle pathcolor='#5FE2C5' percentage='40' icon='fa fa-motorcycle fa-2x' arrow='down'/>
-                        <Circle pathcolor='#ABD99E'percentage='67' icon='fa fa-taxi fa-2x' arrow='down'/><Circle pathcolor='#BC82A6' percentage='22' icon='fa fa-bus fa-2x' arrow='up'/>
-                        {/* <BarChart/> */}
+                        {circledata.map((value)=>{
+                           console.log(value)
+                           console.log(circledata)
+                           return(<Circle {...value}/>);
+                        })}
                     </div>
             </div>
             
