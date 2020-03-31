@@ -9,16 +9,25 @@ function Areachart() {
 const data = React.useMemo(
     () => [
       {
-        label: 'Previous Year',
-        data: [['jan', 50], ['feb',20], ['mar', 40], ['apr', 20], ['may', 80],['jun',60],['jul',30],['aug',50],['sept',40],['oct',30],['nov',50],['dec',70]]
-          }
+        label: 'N',
+        data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20]]
+          },
+      {
+        label: 'N-1',
+        data: [['',0],['Mon', 50], ['Tue',20], ['Wed', 40], ['Thu', 20], ['Fri', 80],['Sat',60],['Sun',30]]
+          },
+      {
+        label: 'N-2',
+        data: [['',0],['Mon', 20], ['Tue',30], ['Wed', 25], ['Thu', 30], ['Fri', 80],['Sat',50],['Sun',50]]
+          },
       
+  
     ],
     []
   )
   const series = React.useMemo(
     () => ({
-      type: 'area'
+      type: 'line'
     }),
     []
   )
@@ -38,7 +47,7 @@ const data = React.useMemo(
          marginRight:'10px'     
     }}>
         <Chart data={data} series={series} axes={axes} tooltip />
-        <p style={{textAlign:'center',fontWeight:'lighter'}}>Annual Trend Chart</p>
+        <p style={{textAlign:'center',fontWeight:'lighter'}}>Trend Chart</p>
 
 
     </div>

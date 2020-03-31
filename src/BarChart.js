@@ -7,8 +7,8 @@ class BarChart extends Component{
         this.drawBarChart(data)
     }
     drawBarChart(data){
-        const canvasHeight=400
-        const canvasWidth=600
+        const canvasHeight=200
+        const canvasWidth=200
         const Scale=20
         const svgCanvas=d3.select(this.refs.canvas)
             .append("svg")
@@ -18,31 +18,17 @@ class BarChart extends Component{
         svgCanvas.selectAll('rect')
             .data(data).enter()
             .append("rect")
-            .attr("width",40)
-            .attr("height",(datapoint)=>datapoint*Scale)
+            .attr("height",4)
+            .attr("width",(datapoint)=>datapoint*Scale)
             .attr("fill","orange")
-            .attr("x",(datapoint,iteration)=>iteration*45)
-            .attr("y",(datapoint)=>canvasHeight-datapoint*Scale)
+            .attr("y",(datapoint,iteration)=>iteration*25)
+            .attr("x",(datapoint)=>canvasHeight-datapoint*Scale)
         svgCanvas.selectAll("text")
         .data(data).enter()
         .append("text")
-        .attr("x",(datapoint,i)=>i*45+10)
-        .attr("y",(datapoint,i)=>canvasHeight-datapoint*Scale-10)
+        .attr("y",(datapoint,i)=>i*25+5)
+        .attr("x",(datapoint,i)=>canvasHeight-datapoint*Scale-15)
         .text(datapoint=>datapoint)
-        
-    
-        var scale = d3.scaleLinear()
-                   .domain([0,5])
-                   .range([0, canvasWidth - 45*data.length]);
-
-        // Add scales to axis
-        var x_axis = d3.axisBottom()
-                    .scale(scale);
-                    
-
-        //Append group and insert axis
-        svgCanvas.append("g")
-        .call(x_axis);
                 
     }
     render(){
