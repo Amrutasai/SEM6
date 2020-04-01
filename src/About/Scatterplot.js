@@ -34,7 +34,7 @@ export default class Scatterplot extends Component {
   render() {
     const {data} = this.props;
     const {value} = this.state;
-    return <div>
+    return <div style={{marginLeft:'-75px',marginRight:'0px'}}>
       <XYPlot
         margin={{top:5, left: 60, right: 5, bottom: 30}}
         width={320}

@@ -14,6 +14,7 @@ import Circle from './Circle';
 import SidePanel from './SidePanel/SidePanel';
 import About from './About/About'
 import Services from './Services/Services';
+import MapContainer  from './MyMap';
 
 function App() {
   
@@ -33,7 +34,7 @@ function App() {
         <div>
           <SidePanel/>
           <Switch>
-            <Route path="/" component={Areachart} exact />
+            <Route path="/" component={About} exact />
             <Route path="/about" component={About} />
             <Route path="/servicesparking" component={()=><Services title='Average Parking Space utilization' 
               circledata={[
@@ -101,6 +102,8 @@ function App() {
                     },  
               ]
               }/>}/>
+            <Route path="/contact" component={MapContainer} />
+
 
           </Switch>
         </div>
