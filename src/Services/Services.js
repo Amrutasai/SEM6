@@ -1,10 +1,10 @@
 import React from 'react'
 import Circle from '../Circle'
 import Areachart from '../reactChart2'
-import MyChart from '../reactCharts1'
-import Lines from '../Lines'
-import BarChart from '../BarChart'
-import { map } from 'd3'
+// import MyChart from '../reactCharts1'
+// import Lines from '../Lines'
+// import BarChart from '../BarChart'
+// import { map } from 'd3'
 
 function Services(props) {
     let {title,circledata,chartdata}=props

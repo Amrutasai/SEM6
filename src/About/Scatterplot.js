@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {
-  Hint,
+  // Hint,
   HorizontalGridLines,
   MarkSeries,
   VerticalGridLines,
@@ -9,31 +9,31 @@ import {
   YAxis
 } from 'react-vis';
 
-import HintContent from './hint-content.js';
+// import HintContent from './hint-content.js';
 
-export default class Scatterplot extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: null
-    };
-    this._rememberValue = this._rememberValue.bind(this);
-    this._forgetValue = this._forgetValue.bind(this);
-  }
+export default function Scatterplot(props){
+  // constructor(props) {
+    
+  //   this.state = {
+  //     value: null
+  //   };
+  //   this._rememberValue = this._rememberValue.bind(this);
+  //   this._forgetValue = this._forgetValue.bind(this);
+  // }
 
-  _rememberValue(value) {
-    this.setState({value});
-  }
+  // _rememberValue(value) {
+  //   this.setState({value});
+  // }
 
-  _forgetValue() {
-    this.setState({
-      value: null
-    });
-  }
-
-  render() {
-    const {data} = this.props;
-    const {value} = this.state;
+  // _forgetValue() {
+  //   this.setState({
+  //     value: null
+  //   });
+  // }
+  const {data} = props;
+  console.log('data:',data)
+  
+    // const {value} = this.state;
     return <div style={{marginLeft:'-75px',marginRight:'0px'}}>
       <XYPlot
         margin={{top:5, left: 60, right: 5, bottom: 30}}
@@ -45,16 +45,16 @@ export default class Scatterplot extends Component {
         <YAxis/>
         <MarkSeries
           data={data}
-          onValueMouseOver={this._rememberValue}
-          onValueMouseOut={this._forgetValue}
+          // onValueMouseOver={this._rememberValue}
+          // onValueMouseOut={this._forgetValue}
           opacity={0.7}
         />
-        {value ?
+        {/* {value ?
           <Hint value={value}>
             <HintContent value={value} />
           </Hint> :
           null
-        }
+        } */}
       </XYPlot>
       <div style={{
         color: '#c6c6c6',
@@ -72,5 +72,5 @@ export default class Scatterplot extends Component {
         width: '320px'
       }}>Incoming</div>
     </div>;
-  }
+  
 }

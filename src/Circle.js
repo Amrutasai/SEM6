@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import {  buildStyles } from 'react-circular-progressbar';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 function Circle(props){

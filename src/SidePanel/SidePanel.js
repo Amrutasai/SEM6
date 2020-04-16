@@ -17,7 +17,7 @@ function SidePanel(){
                 <NavLink style={{textDecoration:'none'}}to="/servicesparking"><p className='p-sidepanel'>Parking Services</p></NavLink>
                 <NavLink style={{textDecoration:'none'}}to="/servicescustomer"><p className='p-sidepanel'>Customer Services</p></NavLink>
                 <NavLink style={{textDecoration:'none'}}to="/servicesbaggage"><p className='p-sidepanel'>Baggage Services</p></NavLink>
-                <NavLink style={{textDecoration:'none'}}to="/contact"><p className='p-sidepanel'>Contact</p></NavLink>
+                <NavLink style={{textDecoration:'none'}}to="/reachus"><p className='p-sidepanel'>Reach Us</p></NavLink>
             </div>
             
         </div>
