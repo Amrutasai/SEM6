@@ -20,12 +20,13 @@ const markers = [
 class Landing extends Component{
   constructor(){
     super();
-    this.state = {render:''}
+    this.state = {render:'',
+  showLanding:true}
 }
 handleClick(compName, e){
     console.log(compName);
     this.setState({render:compName});  
-      
+    this.setState({showLanding:false})
 }
 _renderSubComp(){
     console.log('in rendersub')
@@ -36,8 +37,10 @@ _renderSubComp(){
     }
 }
   render(){
+
+  if (this.state.showLanding===true)
   return (
-    <div >
+      <div style={{marginLeft:'-100px',marginTop:'-100px'}}>
       <ComposableMap style={{justifyContent:'center'}}>
         <Geographies geography={geoUrl}>
           {({geographies}) => geographies.map(geo =>
@@ -68,9 +71,9 @@ _renderSubComp(){
         </Marker>
         ))}
       </ComposableMap>
-      {    this._renderSubComp()}
     </div>
   );
+  else return(<div>  {this._renderSubComp()}   </div>)
 };
 }
 

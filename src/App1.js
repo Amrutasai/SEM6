@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import './App.css';
 import SidePanel from './SidePanel/SidePanel';
@@ -7,16 +7,16 @@ import Services from './Services/Services';
 import MapContainer  from './MyMap';
 import Landing from './Landing/Landing';
 import Landing2 from './Landing/Landing2';
+import App from './App';
 
-function App1() {
-   
+class App1 extends Component {
+  render(){
   return (
       <BrowserRouter>
         <div>
           <SidePanel/>
           <Switch>
-            <Route path="/" component={Landing2} exact />
-            <Route path="/about" component={About} />
+            <Route path="/" component={About} exact  />
             <Route path="/servicesparking" component={()=><Services title='Average Parking Space utilization' 
               circledata={[
                 {'pathcolor':'#EC5C5C', 'percentage':'56', 'icon':'fa fa-car fa-2x', 'arrow':'up'},
@@ -90,6 +90,7 @@ function App1() {
         </div>
       </BrowserRouter>
   );
+            }
 }
 
 export default App1;
