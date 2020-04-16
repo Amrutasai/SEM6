@@ -35,6 +35,16 @@ export default function Scatterplot(props){
   
     // const {value} = this.state;
     return <div style={{marginLeft:'-75px',marginRight:'0px'}}>
+  _forgetValue() {
+    this.setState({
+      value: null
+    });
+  }
+
+  render() {
+    const {data} = this.props;
+    const {value} = this.state;
+    return <div>
       <XYPlot
         margin={{top:5, left: 60, right: 5, bottom: 30}}
         width={320}
@@ -58,19 +68,22 @@ export default function Scatterplot(props){
       </XYPlot>
       <div style={{
         color: '#c6c6c6',
-        fontSize: 11,
+        fontSize: 12,
         lineHeight: '13px',
         textAlign: 'right',
-        transform: 'rotate(-90deg) translate(120px, -160px)'
-      }}>Outgoing</div>
+        transform: 'rotate(-90deg) translate(120px, -160px)',
+        marginRight: 30
+      }}>Departures</div>
+
       <div style={{
         color: '#c6c6c6',
-        fontSize: 11,
+        fontSize: 12,
         lineHeight: '13px',
         textAlign: 'right',
         transform: 'translate(-5px,-14px)',
-        width: '320px'
-      }}>Incoming</div>
+        width: '320px',
+        marginTop: 20
+      }}>Arrivals</div>
     </div>;
   
 }
