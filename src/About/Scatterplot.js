@@ -31,7 +31,6 @@ export default function Scatterplot(props){
   //   });
   // }
   const {data} = props;
-  console.log('data:',data)
   
     // const {value} = this.state;
     return <div style={{marginLeft:'-75px',marginRight:'0px'}}>

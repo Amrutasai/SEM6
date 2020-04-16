@@ -5,8 +5,8 @@ import Landing from '../Landing/Landing';
 
 
 class SidePanel extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
       showPanel:true}
     }
@@ -15,6 +15,7 @@ class SidePanel extends Component{
         this.setState({showPanel:false})
     }
     render(){
+    let city=this.props.city
     if (this.state.showPanel===true)
     return(
         <div style={{
@@ -22,7 +23,7 @@ class SidePanel extends Component{
              width:'250px',height:'100vh',position:'absolute',top:'0'}}
         >
             <div style={{backgroundColor:'#FC6868',color:'white'}}>
-            <div style={{textDecoration:'none',color:'white'}}onClick={this.handleClick.bind(this)}><div style={{textAlign:'center',fontWeight:'bolder',fontSize:'25px',marginTop:'200px',padding:'10px'}}>Mumbai  </div></div>
+            <div style={{textDecoration:'none',color:'white'}}onClick={this.handleClick.bind(this)}><div style={{textAlign:'center',fontWeight:'bolder',fontSize:'25px',marginTop:'200px',padding:'10px'}}>{city} </div></div>
             </div>
             <div >
                 <NavLink style={{textDecoration:'none'}}to="/"><p className='p-sidepanel'>About</p></NavLink>

@@ -20,8 +20,6 @@ function Services(props) {
                     
                     <div style={{display:'flex',flexDirection:'row',paddingRight:'20px',justifyContent:'center'}}>
                         {circledata.map((value)=>{
-                           console.log(value)
-                           console.log(circledata)
                            return(<Circle {...value}/>);
                         })}
                     </div>

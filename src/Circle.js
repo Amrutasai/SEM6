@@ -29,7 +29,7 @@ function Circle(props){
         backgroundColor: 'white',
     })}>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    <i class={icon} style={{color:'#5D5C56'}} aria-hidden="true"></i>
+    <i className={icon} style={{color:'#5D5C56'}} aria-hidden="true"></i>
   </CircularProgressbarWithChildren>
 
   <p style={{textAlign:'center',fontSize:'20px',color:'#757575',fontWeight:'bold',margin:'0'}}>
