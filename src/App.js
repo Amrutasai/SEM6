@@ -15,14 +15,7 @@ function App() {
   return (
     <div>
       <Landing/>
-      {/* <Test/> */}
-      {/* <BrowserRouter>
-        <div>
-          <Switch>
-            <Route path="/Mumbai" component={App1} exact />
-          </Switch>
-        </div>
-      </BrowserRouter> */}
+      {/* <App1/> */}
       </div>
   );
 }
