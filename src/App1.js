@@ -5,6 +5,7 @@ import SidePanel from './SidePanel/SidePanel';
 import About from './About/About'
 import Services from './Services/Services';
 import MapContainer  from './MyMap';
+import Landing from './Landing/Landing';
 
 class App1 extends Component {
   constructor(props){
@@ -28,7 +29,7 @@ class App1 extends Component {
             <Route path="/servicesparking" component={()=><Services title='Average Parking Space utilization' {...parking}/>}/>
             <Route path="/servicescustomer" component={()=><Services title='Average Customer Service utilization'{...customer}/>}/>
             <Route path="/servicesbaggage" component={()=><Services title='Average Baggage Service utilization' {...baggage}/>}/>
-            <Route path="/reachus" component={()=><div><MapContainer/></div>} />
+            <Route path="/map" component={()=><div><MapContainer/></div>} />
           </Switch>
         </div>
       </BrowserRouter>

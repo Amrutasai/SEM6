@@ -30,8 +30,7 @@ class SidePanel extends Component{
                 <NavLink style={{textDecoration:'none'}}to="/servicesparking"><p className='p-sidepanel'>Parking Services</p></NavLink>
                 <NavLink style={{textDecoration:'none'}}to="/servicescustomer"><p className='p-sidepanel'>Customer Services</p></NavLink>
                 <NavLink style={{textDecoration:'none'}}to="/servicesbaggage"><p className='p-sidepanel'>Baggage Services</p></NavLink>
-                <NavLink style={{textDecoration:'none'}}to="/reachus"><p className='p-sidepanel'>Reach Us</p></NavLink>
-            </div>
+                <NavLink style={{textDecoration:'none'}}to="/reachus"><p className='p-sidepanel'>Map</p></NavLink>            </div>
             
         </div>
     )
