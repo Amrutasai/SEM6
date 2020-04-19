@@ -10,6 +10,7 @@ import Landing from './Landing/Landing';
 import Landing2 from './Landing/Landing2';
 import App1 from './App1';
 import TestLanding from './TestLanding';
+import TestSidePanel from './TestSidepanel';
 // import Test from './Test';
 // import data_app1 from './Landing/Landing'
 const data_app1=[
@@ -100,10 +101,14 @@ const data_app1=[
 class App extends Component {
   
     state={
-      name:data_app1[0].Mumbai.name,
-      parking:data_app1[0].Mumbai.parking,
-      customer:data_app1[0].Mumbai.customer,
-      baggage:data_app1[0].Mumbai.baggage
+      // name:data_app1[0].Mumbai.name,
+      // parking:data_app1[0].Mumbai.parking,
+      // customer:data_app1[0].Mumbai.customer,
+      // baggage:data_app1[0].Mumbai.baggage
+      name:'A',
+      parking:'',
+      customer:'',
+      baggage:''
           }
   
   render(){ 
@@ -116,12 +121,12 @@ class App extends Component {
         <div>
         
           <Switch>
-            <Route path="/" component={()=><TestLanding state={this.state}/> } exact  />
-            <Route path="/about/:name" component={()=><div><SidePanel city={name} state={this.state}/><About state={this.state}/></div>}/>
-            <Route path="/servicesparking/" component={()=><div><SidePanel city={name}/><Services title='Average Parking Space utilization' {...parking}/></div>}/>
-            <Route path="/servicescustomer/" component={()=><div><SidePanel city={name}/><Services title='Average Customer Service utilization'{...customer}/></div>}/>
-            <Route path="/servicesbaggage/" component={()=><div><SidePanel city={name}/><Services title='Average Baggage Service utilization' {...baggage}/></div>}/>
-            <Route path="/map/" component={()=><div><SidePanel city={name}/><MapContainer/></div>} />
+            <Route path="/" component={()=><Landing state={this.state}/> } exact  />
+            <Route path="/about/:name" component={(props)=><div><TestSidePanel {...props} /><About /></div>}/>
+            <Route path="/servicesparking" component={()=><div><SidePanel city={name}/><Services title='Average Parking Space utilization' {...parking}/></div>}/>
+            <Route path="/servicescustomer" component={()=><div><SidePanel city={name}/><Services title='Average Customer Service utilization'{...customer}/></div>}/>
+            <Route path="/servicesbaggage" component={()=><div><SidePanel city={name}/><Services title='Average Baggage Service utilization' {...baggage}/></div>}/>
+            <Route path="/map" component={()=><div><SidePanel city={name}/><MapContainer/></div>} />
           </Switch>
         </div>
       </BrowserRouter>    
