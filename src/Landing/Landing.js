@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import world from './WholeWrold'
+import world from './WholeWrold';
+import { NavLink,Redirect,Link ,Router} from 'react-router-dom'; 
 import {
   ComposableMap,
   Geographies,
@@ -8,11 +9,9 @@ import {
 } from "react-simple-maps";
 import App1 from "../App1";
 
-const geoUrl =
-//"https://rawgit.com/Anujarya300/bubble_maps/master/data/geography-data/india.topo.json"
-// {world}
- "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
-const markers = [
+const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
+const markers = 
+[
   { markerOffset: 5, name: "Mumbai", coordinates: [75.7139, 19.7515] },
   { markerOffset: 5, name: "Delhi", coordinates: [77.1025, 28.7041] },
   { markerOffset: -23, name: "Seoul", coordinates: [126.9780, 37.5665] },
@@ -105,28 +104,48 @@ const data_app1=[
   }
 ]
 class Landing extends Component{
-  constructor(){
-    super();
-    this.state = {render:'',
-  showLanding:true}
-}
+  constructor(props){
+    super(props);
+    this.state = this.props.state
+  }
+// delaying(){
+//   console.log(data_app1)
+//   console.log("Delaying",this.state);
+// }
+
 handleClick(compName, e){
     console.log(compName);
-    this.setState({render:compName});  
-    this.setState({showLanding:false})
-}
-_renderSubComp(){
-    console.log('in rendersub')
-    console.log("App1 sent data",data_app1[0].Mumbai)
-    switch(this.state.render){
-        case "Mumbai": return <App1 {...data_app1[0].Mumbai}/>
-        // case 'bracelets' : return <Bracelets/>
+    this.setState({render:compName});
+    console.log('Landing before switch',this.state);
 
-    }
+    switch(compName){
+      case "Mumbai": this.setState(
+        {
+        // name:data_app1[0].Mumbai.name,
+        // parking:data_app1[0].Mumbai.parking,
+        // customer:data_app1[0].Mumbai.customer,
+        // baggage:data_app1[0].Mumbai.baggage
+        name:compName
+      }
+    //   ,() => {
+    //     this.delaying(); 
+    // }
+    );
+        
+ 
+  }
+  // return <Redirect push to="/about" />;  
+}
+componentWillUpdate(){
+  console.log("In component did update")
+  console.log("State",this.state)
+  return(
+    <Router>
+      <Link to='/about'/>
+    </Router>
+  )
 }
   render(){
-
-  if (this.state.showLanding===true)
   return (
       <div style={{marginLeft:'-100px',marginTop:'-100px'}}>
       <ComposableMap style={{justifyContent:'center'}}>
@@ -149,19 +168,17 @@ _renderSubComp(){
             <circle cx="12" cy="10" r="3" />
             <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
           </g>
-          <text
-            textAnchor="middle"
-            y={markerOffset}
-            style={{ fontFamily: "system-ui", fill: 'grey' ,fontSize:'10px' }}
-            onClick={this.handleClick.bind(this, name)}          >
-            {name}
-          </text>
+          <Link  style={{textDecoration:'none',color:'white'}} to='/about/${name}' >
+          {/* onClick={this.handleClick.bind(this, name)} > */}
+              <text textAnchor="middle" onClick={this.handleClick.bind(this, name)} y={markerOffset} style={{ fontFamily: "system-ui", fill: 'grey' ,fontSize:'10px' }}>
+                  {name}
+              </text>
+          </Link>
         </Marker>
         ))}
       </ComposableMap>
     </div>
   );
-  else return(<div>  {this._renderSubComp()}   </div>)
 };
 }
 

@@ -7,7 +7,7 @@ import Scatterplot from './Scatterplot';
 class About extends Component{
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state ={};
       }
 
       componentWillMount() {
@@ -19,8 +19,9 @@ class About extends Component{
       }
 
       render() {
-
-        const props = this.state.data;
+//          if (this.state.showPanel===true)
+// {
+          const props = this.state.data;
         if (this.state.loadError) {
           return <div>couldn't load file</div>;
         }
@@ -49,6 +50,7 @@ class About extends Component{
                     </div>
                 
         </div>;
+        //}
       }
 }
 

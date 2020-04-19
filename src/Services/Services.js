@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Circle from '../Circle'
 import Areachart from '../reactChart2'
 // import MyChart from '../reactCharts1'
@@ -6,8 +6,12 @@ import Areachart from '../reactChart2'
 // import BarChart from '../BarChart'
 // import { map } from 'd3'
 
-function Services(props) {
-    let {title,circledata,chartdata}=props
+class Services extends Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+    let {title,circledata,chartdata}=this.props
     return(
         <div style={{margin:'20px',marginLeft:'275px',paddingTop:'10px'}}>
             <div>
@@ -27,5 +31,6 @@ function Services(props) {
             
         </div>
     )
+                    }
 }
 export default Services
