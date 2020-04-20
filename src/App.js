@@ -121,7 +121,7 @@ class App extends Component {
         <div>
         
           <Switch>
-            <Route path="/" component={()=><Landing state={this.state}/> } exact  />
+            <Route path="/" component={()=><Landing /> } exact  />
             <Route path="/about/:name" component={(props)=><div><TestSidePanel {...props} /><About /></div>}/>
             <Route path="/servicesparking/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Parking Space utilization' {...props}/></div>}/>
             <Route path="/servicescustomer/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Customer Service utilization'{...props}/></div>}/>

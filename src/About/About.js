@@ -3,6 +3,8 @@ import './About.css'
 import React, {Component} from 'react';
 import {csv} from 'd3-request';
 import Scatterplot from './Scatterplot';
+import data from './airport.csv';
+
 
 class About extends Component{
     constructor(props) {
@@ -11,9 +13,10 @@ class About extends Component{
       }
 
       componentWillMount() {
-        csv('airport.csv', (error, data) => {
+        csv(data, (error, data1) => {
+          console.log("Airport Data",data1)
           this.setState({
-            data: data.map(d => ({...d, x: Number(d.outgoing), y: Number(d.incoming)}))
+            data1: data1.map(d => ({...d, x: Number(d.outgoing), y: Number(d.incoming)}))
           });
         })
       }
@@ -21,11 +24,12 @@ class About extends Component{
       render() {
 //          if (this.state.showPanel===true)
 // {
-          const props = this.state.data;
+          const data1 = this.state.data1;
+          console.log("CSV Data",data1)
         if (this.state.loadError) {
           return <div>couldn't load file</div>;
         }
-        if (!this.state.data) {
+        if (!this.state.data1) {
           return <div />;
         }
         return <div 
@@ -41,7 +45,7 @@ class About extends Component{
         >
           <h2>Passenger Air Traffic Rates at T2 Terminal</h2>
           <h3 style={{marginBottom:'40px'}}>per 1,000 inhabitants</h3>
-          <Scatterplot data={props}/>
+          <Scatterplot data={data1}/>
                     <div>
                         <img style={{height:'300px',width:'auto',display:'block',marginLeft:'-700px',padding:'10px',marginTop:'-460px'}} src='https://i1.wp.com/www.airwhizz.com/wp-content/uploads/2018/05/1200px-Mumbai_03-2016_114_Airport_international_terminal_interior.jpeg?resize=820%2C400&ssl=1'/>
                         <h3 className = 'p-about' style={{fontWeight:'lighter'}}>Chhatrapati Shivaji Maharaj International Airport<br></br> Where Dreams Take Flight</h3>
