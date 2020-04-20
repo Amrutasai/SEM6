@@ -5,7 +5,9 @@ import {csv} from 'd3-request';
 import Scatterplot from './Scatterplot';
 import data from './airport.csv';
 import data_app1 from '../data_app1';
-
+import baggagecsv from './baggageforecast.csv';
+import parkingcsv from './parkingforecast.csv';
+import customercsv from './customerforecast.csv';
 
 class About extends Component{
     constructor(props) {
@@ -20,6 +22,33 @@ class About extends Component{
             data1: data1.map(d => ({...d, x: Number(d.outgoing), y: Number(d.incoming)}))
           });
         })
+
+        csv(parkingcsv, (error, data2) => {
+          console.log(data2);
+          this.setState({
+            data2: data2.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+          });
+          
+        })
+
+        csv(customercsv, (error, data3) => {
+          console.log(data3);
+          this.setState({
+            data3: data3.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+          });
+          
+        })
+
+        csv(baggagecsv, (error, data4) => {
+          console.log(data4);
+          this.setState({
+            data4: data4.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+          });
+          
+        })
+
+        
+
       }
       render() {
 //          if (this.state.showPanel===true)
@@ -36,7 +65,7 @@ class About extends Component{
                scale=data_app1[0].Mumbai.about.scale;
                imgsrc=data_app1[0].Mumbai.about.imgsrc;
                description=data_app1[0].Mumbai.about.description;
-               break
+              
               // console.log(parking,customer,baggage)
 
               case "Delhi":
@@ -46,8 +75,6 @@ class About extends Component{
                scale=data_app1[1].Delhi.about.scale;
                imgsrc=data_app1[1].Delhi.about.imgsrc;
                description=data_app1[1].Delhi.about.description;
-               break
-
 
                case "Seoul":
                portname=data_app1[2].Seoul.about.portname;
@@ -56,8 +83,6 @@ class About extends Component{
                scale=data_app1[2].Seoul.about.scale;
                imgsrc=data_app1[2].Seoul.about.imgsrc;
                description=data_app1[2].Seoul.about.description;
-               break
-
 
                case "Washington":
                portname=data_app1[3].Washington.about.portname;
@@ -66,8 +91,6 @@ class About extends Component{
                scale=data_app1[3].Washington.about.scale;
                imgsrc=data_app1[3].Washington.about.imgsrc;
                description=data_app1[3].Washington.about.description;
-               break
-
 
                case "Seattle":
                portname=data_app1[4].Seattle.about.portname;
@@ -76,8 +99,6 @@ class About extends Component{
                scale=data_app1[4].Seattle.about.scale;
                imgsrc=data_app1[4].Seattle.about.imgsrc;
                description=data_app1[4].Seattle.about.description;
-               break
-
           }
           
         if (this.state.loadError) {
