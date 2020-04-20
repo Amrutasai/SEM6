@@ -20,36 +20,83 @@ class TestSidePanel extends Component{
       componentWillMount() {
         
         console.log('props',this.props.location)
-        switch(this.props.location.state.name){
+        switch(this.props.location.state.name)
+        {
           case "Mumbai":
-            let parking=data_app1[0].Mumbai.parking
-            let  customer=data_app1[0].Mumbai.customer
-            let  baggage=data_app1[0].Mumbai.baggage
-                
-            
+            { let parking=data_app1[0].Mumbai.parking
+              let customer=data_app1[0].Mumbai.customer
+              let baggage=data_app1[0].Mumbai.baggage}
+                           
+          
             // console.log(parking,customer,baggage)
-        }
+            case "Delhi":
+            { let parking=data_app1[1].Delhi.parking
+              let  customer=data_app1[1].Delhi.customer
+              let  baggage=data_app1[1].Delhi.baggage}
+            
         
-        
+            case "Seoul":
+            { let parking=data_app1[2].Seoul.parking
+              let customer=data_app1[2].Seoul.customer
+              let baggage=data_app1[2].Seoul.baggage}
+
+            case "Washington":
+              { let parking=data_app1[3].Washington.parking
+                let customer=data_app1[3].Washington.customer
+                let baggage=data_app1[3].Washington.baggage}
+
+            case "Seattle":
+              { let parking=data_app1[4].Seattle.parking
+                let customer=data_app1[4].Seattle.customer
+                let baggage=data_app1[4].Seattle.baggage}
       }
+    }
     
       
     
     render(){
     let city=this.props.location.state.name;
-    let {parking,customer,baggage,about}=''
+    let {parking,customer,baggage}=''
     // let parking=this.state.parking
     switch(this.props.location.state.name){
       case "Mumbai":
-         parking=data_app1[0].Mumbai.parking
+         {parking=data_app1[0].Mumbai.parking
          customer=data_app1[0].Mumbai.customer
          baggage=data_app1[0].Mumbai.baggage
-         
-        console.log (parking,customer,baggage)   
+        console.log (parking,customer,baggage) }  
         
         // console.log(parking,customer,baggage)
+
+        case "Delhi":
+            {parking=data_app1[1].Delhi.parking
+            customer=data_app1[1].Delhi.customer
+            baggage=data_app1[1].Delhi.baggage
+            console.log (parking,customer,baggage)
+          }
+
+          case "Seoul":
+            {parking=data_app1[2].Seoul.parking
+            customer=data_app1[2].Seoul.customer
+            baggage=data_app1[2].Seoul.baggage
+            console.log (parking,customer,baggage)
+          }
+
+          case "Washington":
+            {
+            parking=data_app1[3].Washington.parking
+            customer=data_app1[3].Washington.customer
+            baggage=data_app1[3].Washington.baggage
+            console.log (parking,customer,baggage)
+          }
+
+          case "Seattle":
+            {parking=data_app1[4].Seattle.parking
+            customer=data_app1[4].Seattle.customer
+            baggage=data_app1[4].Seattle.baggage
+            console.log (parking,customer,baggage)
+          }
     }
-    console.log (parking,customer,baggage,about)   
+    //console.log (parking,customer,baggage)   
 
     return(
         <div style={{
@@ -63,9 +110,7 @@ class TestSidePanel extends Component{
                 <Link style={{textDecoration:'none'}}to=
                 {{
                   pathname:`/about/${city}`,
-                  state:{
-                    name:city,
-                  }
+                  state:{name:city}
                 }}><p className='p-sidepanel'>About</p></Link>
                 <NavLink style={{textDecoration:'none'}}to=
                 {{
