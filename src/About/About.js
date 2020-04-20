@@ -65,7 +65,7 @@ class About extends Component{
                scale=data_app1[0].Mumbai.about.scale;
                imgsrc=data_app1[0].Mumbai.about.imgsrc;
                description=data_app1[0].Mumbai.about.description;
-              
+               break
               // console.log(parking,customer,baggage)
 
               case "Delhi":
@@ -75,6 +75,7 @@ class About extends Component{
                scale=data_app1[1].Delhi.about.scale;
                imgsrc=data_app1[1].Delhi.about.imgsrc;
                description=data_app1[1].Delhi.about.description;
+               break
 
                case "Seoul":
                portname=data_app1[2].Seoul.about.portname;
@@ -83,6 +84,7 @@ class About extends Component{
                scale=data_app1[2].Seoul.about.scale;
                imgsrc=data_app1[2].Seoul.about.imgsrc;
                description=data_app1[2].Seoul.about.description;
+               break
 
                case "Washington":
                portname=data_app1[3].Washington.about.portname;
@@ -91,6 +93,7 @@ class About extends Component{
                scale=data_app1[3].Washington.about.scale;
                imgsrc=data_app1[3].Washington.about.imgsrc;
                description=data_app1[3].Washington.about.description;
+               break
 
                case "Seattle":
                portname=data_app1[4].Seattle.about.portname;
@@ -99,6 +102,7 @@ class About extends Component{
                scale=data_app1[4].Seattle.about.scale;
                imgsrc=data_app1[4].Seattle.about.imgsrc;
                description=data_app1[4].Seattle.about.description;
+               break
           }
           
         if (this.state.loadError) {
