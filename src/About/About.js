@@ -38,6 +38,38 @@ class About extends Component{
                description=data_app1[0].Mumbai.about.description;
               
               // console.log(parking,customer,baggage)
+
+              case "Delhi":
+               portname=data_app1[1].Delhi.about.portname;
+               tagline=data_app1[1].Delhi.about.tagline;
+               plotheading=data_app1[1].Delhi.about.plotheading;
+               scale=data_app1[1].Delhi.about.scale;
+               imgsrc=data_app1[1].Delhi.about.imgsrc;
+               description=data_app1[1].Delhi.about.description;
+
+               case "Seoul":
+               portname=data_app1[2].Seoul.about.portname;
+               tagline=data_app1[2].Seoul.about.tagline;
+               plotheading=data_app1[2].Seoul.about.plotheading;
+               scale=data_app1[2].Seoul.about.scale;
+               imgsrc=data_app1[2].Seoul.about.imgsrc;
+               description=data_app1[2].Seoul.about.description;
+
+               case "Washington":
+               portname=data_app1[3].Washington.about.portname;
+               tagline=data_app1[3].Washington.about.tagline;
+               plotheading=data_app1[3].Washington.about.plotheading;
+               scale=data_app1[3].Washington.about.scale;
+               imgsrc=data_app1[3].Washington.about.imgsrc;
+               description=data_app1[3].Washington.about.description;
+
+               case "Seattle":
+               portname=data_app1[4].Seattle.about.portname;
+               tagline=data_app1[4].Seattle.about.tagline;
+               plotheading=data_app1[4].Seattle.about.plotheading;
+               scale=data_app1[4].Seattle.about.scale;
+               imgsrc=data_app1[4].Seattle.about.imgsrc;
+               description=data_app1[4].Seattle.about.description;
           }
           
         if (this.state.loadError) {
