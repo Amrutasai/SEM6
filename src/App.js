@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
 import './App.css';
 import SidePanel from './SidePanel/SidePanel';
@@ -121,8 +122,8 @@ class App extends Component {
           }
   
   render(){ 
-    let {parking,customer,baggage,name}=this.state
-
+    // let {parking,customer,baggage,name}=this.state
+   
     return (
         <div>
             <BrowserRouter>

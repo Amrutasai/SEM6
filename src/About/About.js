@@ -5,9 +5,9 @@ import {csv} from 'd3-request';
 import Scatterplot from './Scatterplot';
 import data from './airport.csv';
 import data_app1 from '../data_app1';
-import baggagecsv from './baggageforecast.csv';
-import parkingcsv from './parkingforecast.csv';
-import customercsv from './customerforecast.csv';
+// import baggagecsv from './baggageforecast.csv';
+// import parkingcsv from './parkingforecast.csv';
+// import customercsv from './customerforecast.csv';
 
 class About extends Component{
     constructor(props) {
@@ -23,29 +23,29 @@ class About extends Component{
           });
         })
 
-        csv(parkingcsv, (error, data2) => {
-          console.log(data2);
-          this.setState({
-            data2: data2.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
-          });
+        // csv(parkingcsv, (error, data2) => {
+        //   console.log(data2);
+        //   this.setState({
+        //     data2: data2.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+        //   });
           
-        })
+        // })
 
-        csv(customercsv, (error, data3) => {
-          console.log(data3);
-          this.setState({
-            data3: data3.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
-          });
+        // csv(customercsv, (error, data3) => {
+        //   console.log(data3);
+        //   this.setState({
+        //     data3: data3.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+        //   });
           
-        })
+        // })
 
-        csv(baggagecsv, (error, data4) => {
-          console.log(data4);
-          this.setState({
-            data4: data4.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
-          });
+        // csv(baggagecsv, (error, data4) => {
+        //   console.log(data4);
+        //   this.setState({
+        //     data4: data4.map(d => ({...d, x: Number(d.N_forecast), y: Number(d.a)}))
+        //   });
           
-        })
+        // })
 
         
 
@@ -54,6 +54,8 @@ class About extends Component{
 //          if (this.state.showPanel===true)
 // {      
           let data1 = this.state.data1;
+          // let {data2,data3,data4}=this.state
+          // console.log("DAta1,2,3",data2,data3,data4)
           let {portname,tagline,plotheading,scale,imgsrc,description}=''
 
           console.log("About props",this.props)
