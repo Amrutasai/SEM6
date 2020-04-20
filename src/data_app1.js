@@ -1,4 +1,5 @@
- const data_app1=[
+const parking_array=[55.294245443708895,66.59706171719768,58.689026837418716,62.765296030589404]
+const data_app1=[
     {"Mumbai":
         {
           "name":"Mumbai",
@@ -33,6 +34,10 @@
                   {
                     label: 'N-2',
                     data: [['',0],['Mon', 20], ['Tue',30], ['Wed', 25], ['Thu', 30], ['Fri', 80],['Sat',50],['Sun',50]]
+                  }, 
+                  {
+                    label: 'Prediction',
+                    data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20], ['Thu', parking_array[0]], ['Fri', parking_array[1]],['Sat',parking_array[2]],['Sun',parking_array[3]]]
                   },  
                 ]
             
