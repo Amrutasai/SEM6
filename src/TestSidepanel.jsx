@@ -37,18 +37,19 @@ class TestSidePanel extends Component{
     
     render(){
     let city=this.props.location.state.name;
-    let {parking,customer,baggage}=''
+    let {parking,customer,baggage,about}=''
     // let parking=this.state.parking
     switch(this.props.location.state.name){
       case "Mumbai":
          parking=data_app1[0].Mumbai.parking
          customer=data_app1[0].Mumbai.customer
          baggage=data_app1[0].Mumbai.baggage
+         
         console.log (parking,customer,baggage)   
         
         // console.log(parking,customer,baggage)
     }
-    console.log (parking,customer,baggage)   
+    console.log (parking,customer,baggage,about)   
 
     return(
         <div style={{
@@ -62,7 +63,9 @@ class TestSidePanel extends Component{
                 <Link style={{textDecoration:'none'}}to=
                 {{
                   pathname:`/about/${city}`,
-                  state:{name:city}
+                  state:{
+                    name:city,
+                  }
                 }}><p className='p-sidepanel'>About</p></Link>
                 <NavLink style={{textDecoration:'none'}}to=
                 {{

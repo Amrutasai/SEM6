@@ -17,6 +17,15 @@ const data_app1=[
   {"Mumbai":
       {
         "name":"Mumbai",
+        "about":{
+          portname:'Chhatrapati Shivaji Maharaj International Airport',
+          tagline:'Where Dreams Take Flight',
+          plotheading:'Passenger Air Traffic Rates at T2 Terminal',
+          scale:'per 1,000 inhabitants',
+          imgsrc:'https://i1.wp.com/www.airwhizz.com/wp-content/uploads/2018/05/1200px-Mumbai_03-2016_114_Airport_international_terminal_interior.jpeg?resize=820%2C400&ssl=1',
+          description:'The new iconic Terminal 2 is India’s first and most advanced vertical passenger terminal that integrates world class design, architecture, infrastructure and operational efficiency, with a rich infusion of Indian heritage and cultural character. The transformation of CSMIA, a brown-field project, is a one-of-its-kind unique infrastructural project in the world, unlike any other airport development projects. With a vision to become one of the world’s best airports, GVK has been continuously and consistently upgrading CSMIA to an airport that delights its guests by offering best in class comfort and convenience.'
+
+        },
         "parking":
         {
           'circledata':
@@ -122,7 +131,7 @@ class App extends Component {
         
           <Switch>
             <Route path="/" component={()=><Landing /> } exact  />
-            <Route path="/about/:name" component={(props)=><div><TestSidePanel {...props} /><About /></div>}/>
+            <Route path="/about/:name" component={(props)=><div><TestSidePanel {...props} /><About {...props}/></div>}/>
             <Route path="/servicesparking/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Parking Space utilization' {...props}/></div>}/>
             <Route path="/servicescustomer/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Customer Service utilization'{...props}/></div>}/>
             <Route path="/servicesbaggage/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Baggage Service utilization' {...props}/></div>}/>
