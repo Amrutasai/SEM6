@@ -124,7 +124,7 @@ class About extends Component{
           <h3 style={{marginBottom:'40px'}}>{scale}</h3>
           <Scatterplot data={data1}/>
                     <div>
-                        <img style={{height:'300px',width:'auto',display:'block',marginLeft:'-700px',padding:'10px',marginTop:'-460px'}} src={imgsrc}/>
+                        <img style={{height:'300px',width:'600px',display:'block',marginLeft:'-700px',padding:'10px',marginTop:'-460px'}} src={imgsrc}/>
                         <h3 className = 'p-about' style={{fontWeight:'lighter'}}>{portname}<br></br>{tagline}</h3>
                         <p className = 'p-about'>{description}</p>
                     </div>
