@@ -105,7 +105,7 @@ class App extends Component {
       // parking:data_app1[0].Mumbai.parking,
       // customer:data_app1[0].Mumbai.customer,
       // baggage:data_app1[0].Mumbai.baggage
-      name:'A',
+      name:'',
       parking:'',
       customer:'',
       baggage:''
@@ -123,10 +123,10 @@ class App extends Component {
           <Switch>
             <Route path="/" component={()=><Landing state={this.state}/> } exact  />
             <Route path="/about/:name" component={(props)=><div><TestSidePanel {...props} /><About /></div>}/>
-            <Route path="/servicesparking" component={()=><div><SidePanel city={name}/><Services title='Average Parking Space utilization' {...parking}/></div>}/>
-            <Route path="/servicescustomer" component={()=><div><SidePanel city={name}/><Services title='Average Customer Service utilization'{...customer}/></div>}/>
-            <Route path="/servicesbaggage" component={()=><div><SidePanel city={name}/><Services title='Average Baggage Service utilization' {...baggage}/></div>}/>
-            <Route path="/map" component={()=><div><SidePanel city={name}/><MapContainer/></div>} />
+            <Route path="/servicesparking/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Parking Space utilization' {...props}/></div>}/>
+            <Route path="/servicescustomer/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Customer Service utilization'{...props}/></div>}/>
+            <Route path="/servicesbaggage/:name" component={(props)=><div><TestSidePanel {...props}/><Services title='Average Baggage Service utilization' {...props}/></div>}/>
+            <Route path="/map/:name" component={(props)=><div><TestSidePanel {...props}/><MapContainer/></div>} />
           </Switch>
         </div>
       </BrowserRouter>    

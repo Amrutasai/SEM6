@@ -11,7 +11,10 @@ class Services extends Component {
         super(props);
     }
     render(){
-    let {title,circledata,chartdata}=this.props
+    console.log('Props',this.props)
+    console.log('Location',this.props.location)
+    let title=this.props.title;
+    let {circledata,chartdata}=this.props.location.state.services
     return(
         <div style={{margin:'20px',marginLeft:'275px',paddingTop:'10px'}}>
             <div>
