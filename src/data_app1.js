@@ -45,7 +45,7 @@ const data_app1=[
                 },   
               ],
 
-              'tableval' : 
+           'tableval' : 
         [
           {'id': '1', 'floor': 'LG', 'service': 'Trolley', 'paid': '100'},
           {'id': '2', 'floor': 'P1', 'service': 'Valet Parking  ', 'paid': '500'},
