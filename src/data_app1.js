@@ -141,11 +141,11 @@ const data_app1=[
   "name":"Delhi",
         "about":{
           portname:'Indira Gandhi International Airport',
-          tagline:'Where Dreams Take Flight',
+          tagline:'',
           plotheading:'Passenger Air Traffic Rates',
           scale:'per 1,000 inhabitants',
           imgsrc:'https://quidosithe.tk/wp-content/uploads/sites/14/2020/03/Delhi-13thMarch.jpg',
-          description:'The new iconic Terminal 2 is India’s first and most advanced vertical passenger terminal that integrates world class design, architecture, infrastructure and operational efficiency, with a rich infusion of Indian heritage and cultural character. The transformation of CSMIA, a brown-field project, is a one-of-its-kind unique infrastructural project in the world, unlike any other airport development projects. With a vision to become one of the world’s best airports, GVK has been continuously and consistently upgrading CSMIA to an airport that delights its guests by offering best in class comfort and convenience.'
+          description:' Indira Gandhi International Airport, is the unique airport that serves the city of New Delhi. The airport is the busiest one in India in terms of passenger traffic and cargo. There are plans to continue to expand the airport if the traffic continues to grow. The airport is the busiest airport of India and is locted in Palam, 16km from the New Delhi city centre and 15 km south-west of New Delhi railway station.'
 
         },
   "parking":
@@ -261,11 +261,11 @@ const data_app1=[
   "name":"Seoul",
         "about":{
           portname:'Incheon International Airport',
-          tagline:'Where Dreams Take Flight',
+          tagline:'',
           plotheading:'Passenger Air Traffic Rates',
           scale:'per 1,000 inhabitants',
           imgsrc:'https://cdn.theculturetrip.com/wp-content/uploads/2018/04/incheonintnl.jpg',
-          description:'The new iconic Terminal 2 is India’s first and most advanced vertical passenger terminal that integrates world class design, architecture, infrastructure and operational efficiency, with a rich infusion of Indian heritage and cultural character. The transformation of CSMIA, a brown-field project, is a one-of-its-kind unique infrastructural project in the world, unlike any other airport development projects. With a vision to become one of the world’s best airports, GVK has been continuously and consistently upgrading CSMIA to an airport that delights its guests by offering best in class comfort and convenience.'
+          description:'Incheon International Airport (IIA) is the largest airport in South Korea, the primary airport serving the Seoul Capital Area, and one of the largest and busiest airports in the world. Since 2005, it has been rated the best airport worldwide by Airports Council International every year. It is also rated as the worlds cleanest airport and the worlds best international transit airport by Skytrax.'
 
         },
   "parking":
@@ -501,11 +501,11 @@ const data_app1=[
   "name":"Seattle",
         "about":{
           portname:'Seattle-Tacoma International Airport',
-          tagline:'Where Dreams Take Flight',
+          tagline:'',
           plotheading:'Passenger Air Traffic Rates',
           scale:'per 1,000 inhabitants',
           imgsrc:'https://transportationtodaynews.com/wp-content/uploads/2019/07/shutterstock_662230153.jpg',
-          description:'The new iconic Terminal 2 is India’s first and most advanced vertical passenger terminal that integrates world class design, architecture, infrastructure and operational efficiency, with a rich infusion of Indian heritage and cultural character. The transformation of CSMIA, a brown-field project, is a one-of-its-kind unique infrastructural project in the world, unlike any other airport development projects. With a vision to become one of the world’s best airports, GVK has been continuously and consistently upgrading CSMIA to an airport that delights its guests by offering best in class comfort and convenience.'
+          description:'Seattle–Tacoma International Airport also referred to as Sea–Tac Airport or Sea–Tac, is the primary commercial airport serving the Seattle metropolitan area in the U.S. state of Washington. It is located in the city of SeaTac, approximately 14 miles (23 km) south of Downtown Seattle and 18 miles (29 km) north-northeast of Downtown Tacoma. The airport, the largest in the Pacific Northwest region of North America, is located between Portland, Oregon, and Vancouver, British Columbia, and owned by the Port of Seattle.'
 
         },
   "parking":
