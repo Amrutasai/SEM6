@@ -77,7 +77,7 @@ class Services extends Component {
                      <td>{newArray[1][0]}</td> 
                     <td>{newArray[1][1]+newArray[1][2]}</td>
                     <td>{newArray[1][3]+newArray[1][4]+newArray[1][5]+newArray[1][6]+newArray[1][7]+newArray[1][8]+newArray[1][9]+newArray[1][10]+newArray[1][11]+newArray[1][12]+newArray[1][13]+newArray[1][14]+newArray[1][15]+newArray[1][16]+newArray[1][17]}</td>
-                    <td>{newArray[1][18]+newArray[1][19]+newArray[1][20]}</td>
+                    <td>{newArray[1][18]+newArray[1][19]+newArray[1][20]+newArray[1][21]}</td>
                 </tr>
                 <tr>
                     <td>{newArray[2][0]}</td>
@@ -89,7 +89,7 @@ class Services extends Component {
                     <td>{newArray[3][0]}</td> 
                     <td>{newArray[3][1]+newArray[3][2]}</td>
                     <td>{newArray[3][3]+newArray[3][4]+newArray[3][5]+newArray[3][6]+newArray[3][7]+newArray[3][8]+newArray[3][9]+newArray[3][10]+newArray[3][11]+newArray[3][12]+newArray[3][13]+newArray[3][14]+newArray[3][15]+newArray[3][16]+newArray[3][17]}</td>
-                    <td>{newArray[3][18]+newArray[3][19]}</td>
+                    <td>{newArray[3][18]+newArray[3][19]+newArray[3][20]}</td>
                 </tr>  
                 <tr>
                     <td>{newArray[4][0]}</td>
