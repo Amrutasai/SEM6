@@ -34,7 +34,16 @@ const data_app1=[
                   label: 'N-2',
                   data: [['',0],['Mon', 20], ['Tue',30], ['Wed', 25], ['Thu', 30], ['Fri', 80],['Sat',50],['Sun',50]]
                 },  
-              ]
+              ],
+
+              'tableval' : 
+        [
+          {'id': '1', 'floor': 'LG', 'service': 'Trolley', 'paid': '100'},
+          {'id': '2', 'floor': 'P1', 'service': 'Valet Parking  ', 'paid': '500'},
+          {'id': ' ', 'floor': '  ', 'service': '       ', 'paid': '  '},
+          {'id': ' ', 'floor': '  ', 'service': '               ', 'paid': '  '},
+          {'id': ' ', 'floor': '  ', 'service': '         ', 'paid': '  '}
+        ] 
           
         },
         "customer":
@@ -60,6 +69,14 @@ const data_app1=[
                   label: 'N-2',
                   data: [['',0],['Mon', 70], ['Tue',30], ['Wed', 55], ['Thu', 30], ['Fri', 50],['Sat',50],['Sun',90]]
                     },  
+              ],
+              
+              'tableval' : [
+                {'id': '1', 'floor': 'LG', 'service': 'Water  ', 'paid': '100'},
+                {'id': '2', 'floor': 'P1', 'service': 'Restrooms      ', 'paid': '255'},
+                {'id': '3', 'floor': 'P2', 'service': 'Medical', 'paid': '87'},
+                {'id': '4', 'floor': 'P2', 'service': 'Food & Beverage', 'paid': '87'},
+                {'id': '5', 'floor': 'P2', 'service': 'Help Desk', 'paid': '87'}
               ] 
           
         },
