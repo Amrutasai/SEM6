@@ -3,6 +3,19 @@
 let parking_prediction=[55.294245443708895,66.597061717,62.765296030,58.689026837]
 let customer_prediction=[67.44813835866948,56.83618926262203,58.96146536087123,55.1780746580977]
 let baggage_prediction=[95.9089476393428,93.07362112716878,91.10858237382818,89.74670137509636]
+
+let Delhiparking_prediction=[95.294245443708895,116.597061717,122.765296030,128.689026837]
+let Delhicustomer_prediction=[67.44813835866948,156.83618926262203,158.96146536087123,175.1780746580977]
+let Delhibaggage_prediction=[95.9089476393428,193.07362112716878,251.10858237382818,189.74670137509636]
+
+let Seoulparking_prediction=[130.48028576,80.63360429,95.62249963,175.31135266]
+let Seoulcustomer_prediction=[46.4324658,64.71675249,88.36474061,86.28739236]
+let Seoulbaggage_prediction=[95.9089476393428,93.07362112716878,91.10858237382818,89.74670137509636]
+
+let Seattleparking_prediction=[56.48028576,60.63360429,65.62249963,70.31135266]
+let Seattlecustomer_prediction=[46.4324658,64.71675249,48.36474061,56.28739236]
+let Seattlebaggage_prediction=[95.9089476393428,93.07362112716878,91.10858237382818,89.74670137509636]
+
 const data_app1=[
   {"Mumbai":
       {
@@ -171,6 +184,10 @@ const data_app1=[
             label: 'N-2',
             data: [['',0],['Mon', 143], ['Tue',10], ['Wed', 25], ['Thu', 70], ['Fri', 180],['Sat',79],['Sun',200]]
           },  
+          {
+            label: 'Prediction',
+            data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20], ['Thu', Delhiparking_prediction[0]], ['Fri', Delhiparking_prediction[1]],['Sat', Delhiparking_prediction[2]],['Sun', Delhiparking_prediction[3]]]
+          },
         ],
 
         'tableval' : 
@@ -205,7 +222,11 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 154], ['Tue',36], ['Wed', 55], ['Thu', 25], ['Fri', 150],['Sat',150],['Sun',190]]
-              },  
+              }, 
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Delhicustomer_prediction[0]], ['Fri', Delhicustomer_prediction[1]],['Sat',Delhicustomer_prediction[2]],['Sun',Delhicustomer_prediction[3]]]
+              }, 
         ],
         
         'tableval' : [
@@ -239,6 +260,10 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 70], ['Tue',85], ['Wed', 15], ['Thu', 125], ['Fri', 167],['Sat',140],['Sun',200]]
+              },
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Delhibaggage_prediction[0]], ['Fri', Delhibaggage_prediction[1]],['Sat',Delhibaggage_prediction[2]],['Sun',Delhibaggage_prediction[3]]]
               }, 
         ],
         
@@ -290,7 +315,11 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 120], ['Tue',73], ['Wed', 25], ['Thu', 54], ['Fri', 150],['Sat',127],['Sun',198]]
-          },  
+          }, 
+          {
+            label: 'Prediction',
+            data: [['',0],['Mon', 130], ['Tue',80], ['Wed', 90], ['Thu', Seoulparking_prediction[0]], ['Fri', Seoulparking_prediction[1]],['Sat',Seoulparking_prediction[2]],['Sun',Seoulparking_prediction[3]]]
+          }, 
         ],
 
         'tableval' : 
@@ -325,7 +354,11 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 70], ['Tue',30], ['Wed', 55], ['Thu', 30], ['Fri', 82],['Sat',69],['Sun',90]]
-              },  
+              }, 
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seoulcustomer_prediction[0]], ['Fri', Seoulcustomer_prediction[1]],['Sat',Seoulcustomer_prediction[2]],['Sun',Seoulcustomer_prediction[3]]]
+              }, 
         ],
         
         'tableval' : [
@@ -359,6 +392,10 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 40], ['Tue',20], ['Wed', 50], ['Thu', 65], ['Fri', 80],['Sat',90],['Sun',100]]
+              },
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seoulbaggage_prediction[0]], ['Fri', Seoulbaggage_prediction[1]],['Sat',Seoulbaggage_prediction[2]],['Sun',Seoulbaggage_prediction[3]]]
               }, 
         ],
 
@@ -530,6 +567,10 @@ const data_app1=[
           {
             label: 'N-2',
             data: [['',0],['Mon', 50], ['Tue',34], ['Wed', 25], ['Thu', 60], ['Fri', 83],['Sat',63],['Sun',99]]
+          },
+          {
+            label: 'Prediction',
+            data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattleparking_prediction[0]], ['Fri', Seattleparking_prediction[1]],['Sat',Seattleparking_prediction[2]],['Sun',Seattleparking_prediction[3]]]
           },  
         ],
 
@@ -566,6 +607,10 @@ const data_app1=[
             label: 'N-2',
             data: [['',0],['Mon', 80], ['Tue',30], ['Wed', 65], ['Thu', 40], ['Fri', 68],['Sat',80],['Sun',90]]
               },  
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattlecustomer_prediction[0]], ['Fri', Seattlecustomer_prediction[1]],['Sat', Seattlecustomer_prediction[2]],['Sun', Seattlecustomer_prediction[3]]]
+              },
         ],
         
         'tableval' : [
@@ -600,6 +645,10 @@ const data_app1=[
             label: 'N-2',
             data: [['',0],['Mon', 40], ['Tue',80], ['Wed', 70], ['Thu', 75], ['Fri', 80],['Sat',90],['Sun',100]]
               }, 
+              {
+                label: 'Prediction',
+                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattlebaggage_prediction[0]], ['Fri', Seattlebaggage_prediction[1]],['Sat',Seattlebaggage_prediction[2]],['Sun',Seattlebaggage_prediction[3]]]
+              },
         ],
 
         'tableval' :
