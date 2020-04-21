@@ -1,8 +1,3 @@
-// import data2 from './TestSidepanel'
-
-let parking_prediction=[55.294245443708895,66.597061717,62.765296030,58.689026837]
-let customer_prediction=[67.44813835866948,56.83618926262203,58.96146536087123,55.1780746580977]
-let baggage_prediction=[95.9089476393428,93.07362112716878,91.10858237382818,89.74670137509636]
 const data_app1=[
   {"Mumbai":
       {
@@ -20,8 +15,8 @@ const data_app1=[
         {
           'circledata':
               [
-                {'pathcolor':'#EC5C5C', 'percentage':'56', 'icon':'fa fa-car fa-2x', 'arrow':'up'},
-                {'pathcolor':'#5FE2C5' ,'percentage':'40', 'icon':'fa fa-motorcycle fa-2x' ,'arrow':'down'},
+                {'pathcolor':'#EC5C5C', 'percentage':'100', 'icon':'fa fa-car fa-2x', 'arrow':'up'},
+                {'pathcolor':'#5FE2C5' ,'percentage':'100', 'icon':'fa fa-motorcycle fa-2x' ,'arrow':'down'},
                 {'pathcolor':'#ABD99E','percentage':'67' ,'icon':'fa fa-taxi fa-2x', 'arrow':'down'},
                 {'pathcolor':'#BC82A6', 'percentage':'22', 'icon':'fa fa-bus fa-2x', 'arrow':'up'}
               ],
@@ -29,7 +24,7 @@ const data_app1=[
               [
                 {
                   label: 'N',
-                  data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20]]
+                  data: [['',0],['Mon', 100], ['Tue',40], ['Wed', 20]]
                 },
                 {
                   label: 'N-1',
@@ -38,14 +33,10 @@ const data_app1=[
                 {
                   label: 'N-2',
                   data: [['',0],['Mon', 20], ['Tue',30], ['Wed', 25], ['Thu', 30], ['Fri', 80],['Sat',50],['Sun',50]]
-                },
-                {
-                  label: 'Prediction',
-                  data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20], ['Thu', parking_prediction[0]], ['Fri', parking_prediction[1]],['Sat',parking_prediction[2]],['Sun',parking_prediction[3]]]
-                },   
+                },  
               ],
 
-           'tableval' : 
+              'tableval' : 
         [
           {'id': '1', 'floor': 'LG', 'service': 'Trolley', 'paid': '100'},
           {'id': '2', 'floor': 'P1', 'service': 'Valet Parking  ', 'paid': '500'},
@@ -78,10 +69,6 @@ const data_app1=[
                   label: 'N-2',
                   data: [['',0],['Mon', 70], ['Tue',30], ['Wed', 55], ['Thu', 30], ['Fri', 50],['Sat',50],['Sun',90]]
                     },  
-                {
-                  label: 'Prediction',
-                  data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', customer_prediction[0]], ['Fri', customer_prediction[1]],['Sat',customer_prediction[2]],['Sun',customer_prediction[3]]]
-                    }, 
               ],
               
               'tableval' : [
@@ -116,19 +103,6 @@ const data_app1=[
                   label: 'N-2',
                   data: [['',0],['Mon', 70], ['Tue',80], ['Wed', 80], ['Thu', 75], ['Fri', 80],['Sat',90],['Sun',100]]
                     }, 
-                {
-                  label: 'Prediction',
-                  data: [['',0],['Mon', 60], ['Tue',80], ['Wed', 70], ['Thu', baggage_prediction[0]], ['Fri', baggage_prediction[1]],['Sat',baggage_prediction[2]],['Sun',baggage_prediction[3]]]
-                    },
-              ],
-          
-          'tableval' :
-              [
-                {'id': '1', 'floor': 'LG', 'service': 'Belts  ', 'paid': '100'},
-                {'id': '2', 'floor': 'P1', 'service': 'Weighing Scales', 'paid': '255'},
-                {'id': ' ', 'floor': '  ', 'service': '       ', 'paid': '  '},
-                {'id': ' ', 'floor': '  ', 'service': '               ', 'paid': '  '},
-                {'id': ' ', 'floor': '  ', 'service': '         ', 'paid': '  '}
               ]
           
         }
@@ -152,7 +126,7 @@ const data_app1=[
   {
     'circledata':
         [
-          {'pathcolor':'#EC5C5C', 'percentage':'56', 'icon':'fa fa-car fa-2x', 'arrow':'up'},
+          {'pathcolor':'#EC5C5C', 'percentage':'66', 'icon':'fa fa-car fa-2x', 'arrow':'up'},
           {'pathcolor':'#5FE2C5' ,'percentage':'40', 'icon':'fa fa-motorcycle fa-2x' ,'arrow':'down'},
           {'pathcolor':'#ABD99E','percentage':'67' ,'icon':'fa fa-taxi fa-2x', 'arrow':'down'},
           {'pathcolor':'#BC82A6', 'percentage':'22', 'icon':'fa fa-bus fa-2x', 'arrow':'up'}
@@ -161,7 +135,7 @@ const data_app1=[
         [
           {
             label: 'N',
-            data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20]]
+            data: [['',0],['Mon', 100], ['Tue',40], ['Wed', 20]]
           },
           {
             label: 'N-1',
@@ -241,10 +215,12 @@ const data_app1=[
             data: [['',0],['Mon', 70], ['Tue',80], ['Wed', 80], ['Thu', 75], ['Fri', 80],['Sat',90],['Sun',100]]
               }, 
         ],
-        
+      
+
+
         'tableval' :
         [
-          {'id': '1', 'floor': 'LG', 'service': 'Belts  ', 'paid': '100'},
+          {'id': '1', 'floor': 'LG', 'service': 'Belts  ', 'paid': '200'},
           {'id': '2', 'floor': 'P1', 'service': 'Weighing Scales', 'paid': '255'},
           {'id': ' ', 'floor': '  ', 'service': '       ', 'paid': '  '},
           {'id': ' ', 'floor': '  ', 'service': '               ', 'paid': '  '},
