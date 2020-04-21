@@ -103,8 +103,17 @@ const data_app1=[
                   label: 'N-2',
                   data: [['',0],['Mon', 70], ['Tue',80], ['Wed', 80], ['Thu', 75], ['Fri', 80],['Sat',90],['Sun',100]]
                     }, 
-              ]
+              ],
           
+          'tableval' :
+              [
+                {'id': '1', 'floor': 'LG', 'service': 'Belts  ', 'paid': '100'},
+                {'id': '2', 'floor': 'P1', 'service': 'Weighing Scales', 'paid': '255'},
+                {'id': ' ', 'floor': '  ', 'service': '       ', 'paid': '  '},
+                {'id': ' ', 'floor': '  ', 'service': '               ', 'paid': '  '},
+                {'id': ' ', 'floor': '  ', 'service': '         ', 'paid': '  '}
+              ]
+          ]
         }
       }
   },
