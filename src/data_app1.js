@@ -17,7 +17,7 @@ let Seattlecustomer_prediction=[46.4324658,64.71675249,48.36474061,56.28739236]
 let Seattlebaggage_prediction=[95.9089476393428,93.07362112716878,91.10858237382818,89.74670137509636]
 
 const data_app1=[
-  {"Mumbai":
+{"Mumbai":
       {
         "name":"Mumbai",
         "about":{
@@ -146,13 +146,13 @@ const data_app1=[
           
         }
       }
-  },
+},
 
   //1
 {"Delhi":
 {
   "name":"Delhi",
-        "about":{
+  "about":{
           portname:'Indira Gandhi International Airport',
           tagline:'',
           plotheading:'Passenger Air Traffic Rates',
@@ -186,7 +186,7 @@ const data_app1=[
           },  
           {
             label: 'Prediction',
-            data: [['',0],['Mon', 60], ['Tue',40], ['Wed', 20], ['Thu', Delhiparking_prediction[0]], ['Fri', Delhiparking_prediction[1]],['Sat', Delhiparking_prediction[2]],['Sun', Delhiparking_prediction[3]]]
+            data: [['',0],['Mon', 193], ['Tue',30], ['Wed', 88], ['Thu', Delhiparking_prediction[0]], ['Fri', Delhiparking_prediction[1]],['Sat', Delhiparking_prediction[2]],['Sun', Delhiparking_prediction[3]]]
           },
         ],
 
@@ -225,7 +225,7 @@ const data_app1=[
               }, 
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Delhicustomer_prediction[0]], ['Fri', Delhicustomer_prediction[1]],['Sat',Delhicustomer_prediction[2]],['Sun',Delhicustomer_prediction[3]]]
+                data: [['',0],['Mon', 91], ['Tue',54], ['Wed', 121], ['Thu', Delhicustomer_prediction[0]], ['Fri', Delhicustomer_prediction[1]],['Sat',Delhicustomer_prediction[2]],['Sun',Delhicustomer_prediction[3]]]
               }, 
         ],
         
@@ -263,7 +263,7 @@ const data_app1=[
               },
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Delhibaggage_prediction[0]], ['Fri', Delhibaggage_prediction[1]],['Sat',Delhibaggage_prediction[2]],['Sun',Delhibaggage_prediction[3]]]
+                data: [['',0],['Mon', 43], ['Tue',98], ['Wed', 71], ['Thu', Delhibaggage_prediction[0]], ['Fri', Delhibaggage_prediction[1]],['Sat',Delhibaggage_prediction[2]],['Sun',Delhibaggage_prediction[3]]]
               }, 
         ],
         
@@ -284,7 +284,7 @@ const data_app1=[
 {"Seoul":
 {
   "name":"Seoul",
-        "about":{
+  "about":{
           portname:'Incheon International Airport',
           tagline:'',
           plotheading:'Passenger Air Traffic Rates',
@@ -318,7 +318,7 @@ const data_app1=[
           }, 
           {
             label: 'Prediction',
-            data: [['',0],['Mon', 130], ['Tue',80], ['Wed', 90], ['Thu', Seoulparking_prediction[0]], ['Fri', Seoulparking_prediction[1]],['Sat',Seoulparking_prediction[2]],['Sun',Seoulparking_prediction[3]]]
+            data: [['',0],['Mon', 145], ['Tue',87], ['Wed', 30], ['Thu', Seoulparking_prediction[0]], ['Fri', Seoulparking_prediction[1]],['Sat',Seoulparking_prediction[2]],['Sun',Seoulparking_prediction[3]]]
           }, 
         ],
 
@@ -357,7 +357,7 @@ const data_app1=[
               }, 
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seoulcustomer_prediction[0]], ['Fri', Seoulcustomer_prediction[1]],['Sat',Seoulcustomer_prediction[2]],['Sun',Seoulcustomer_prediction[3]]]
+                data: [['',0],['Mon', 80], ['Tue',40], ['Wed', 20], ['Thu', Seoulcustomer_prediction[0]], ['Fri', Seoulcustomer_prediction[1]],['Sat',Seoulcustomer_prediction[2]],['Sun',Seoulcustomer_prediction[3]]]
               }, 
         ],
         
@@ -395,7 +395,7 @@ const data_app1=[
               },
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seoulbaggage_prediction[0]], ['Fri', Seoulbaggage_prediction[1]],['Sat',Seoulbaggage_prediction[2]],['Sun',Seoulbaggage_prediction[3]]]
+                data: [['',0],['Mon', 30], ['Tue',68], ['Wed', 49], ['Thu', Seoulbaggage_prediction[0]], ['Fri', Seoulbaggage_prediction[1]],['Sat',Seoulbaggage_prediction[2]],['Sun',Seoulbaggage_prediction[3]]]
               }, 
         ],
 
@@ -536,7 +536,7 @@ const data_app1=[
 {"Seattle":
 {
   "name":"Seattle",
-        "about":{
+  "about":{
           portname:'Seattle-Tacoma International Airport',
           tagline:'',
           plotheading:'Passenger Air Traffic Rates',
@@ -570,7 +570,7 @@ const data_app1=[
           },
           {
             label: 'Prediction',
-            data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattleparking_prediction[0]], ['Fri', Seattleparking_prediction[1]],['Sat',Seattleparking_prediction[2]],['Sun',Seattleparking_prediction[3]]]
+            data: [['',0],['Mon', 39], ['Tue',51], ['Wed', 23], ['Thu', Seattleparking_prediction[0]], ['Fri', Seattleparking_prediction[1]],['Sat',Seattleparking_prediction[2]],['Sun',Seattleparking_prediction[3]]]
           },  
         ],
 
@@ -609,7 +609,7 @@ const data_app1=[
               },  
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattlecustomer_prediction[0]], ['Fri', Seattlecustomer_prediction[1]],['Sat', Seattlecustomer_prediction[2]],['Sun', Seattlecustomer_prediction[3]]]
+                data: [['',0],['Mon', 50], ['Tue',70], ['Wed', 60], ['Thu', Seattlecustomer_prediction[0]], ['Fri', Seattlecustomer_prediction[1]],['Sat', Seattlecustomer_prediction[2]],['Sun', Seattlecustomer_prediction[3]]]
               },
         ],
         
@@ -647,7 +647,7 @@ const data_app1=[
               }, 
               {
                 label: 'Prediction',
-                data: [['',0],['Mon', 70], ['Tue',60], ['Wed', 80], ['Thu', Seattlebaggage_prediction[0]], ['Fri', Seattlebaggage_prediction[1]],['Sat',Seattlebaggage_prediction[2]],['Sun',Seattlebaggage_prediction[3]]]
+                data: [['',0],['Mon', 20], ['Tue',80], ['Wed', 50], ['Thu', Seattlebaggage_prediction[0]], ['Fri', Seattlebaggage_prediction[1]],['Sat',Seattlebaggage_prediction[2]],['Sun',Seattlebaggage_prediction[3]]]
               },
         ],
 
